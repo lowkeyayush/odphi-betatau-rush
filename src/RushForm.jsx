@@ -14,7 +14,7 @@ const PSU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAABHCAYAAAAqaN2CA
 
 // Paste the Google Apps Script Web App URL here to make the form live.
 // Setup steps are in SETUP.md. Until it is filled in, submissions just log to the console.
-const ENDPOINT = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbzd4YyQwW9slr0qmee_oAIpnoUP0a6P8WP6hkwc-K9BcpDPf19-6uGvmG27MQLWsXOo/exec";
 
 const PAGES = ["INTEREST", "RUSH 2026 / 2027"];
 const YEARS = ["Freshman", "Sophomore", "Junior", "Senior", "Other"];
