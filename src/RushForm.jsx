@@ -14,7 +14,7 @@ const PSU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAABHCAYAAAAqaN2CA
 
 // Paste the Google Apps Script Web App URL here to make the form live.
 // Setup steps are in SETUP.md. Until it is filled in, submissions just log to the console.
-const ENDPOINT = "https://script.google.com/macros/s/AKfycbzd4YyQwW9slr0qmee_oAIpnoUP0a6P8WP6hkwc-K9BcpDPf19-6uGvmG27MQLWsXOo/exec";
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbzyqYfGZqkdbIsQQFVdFofscPObbpi_93ex1z_PQHuOwqwFKG1t7MjIDZnMhvG5OMPY4A/exec";
 
 const PAGES = ["INTEREST", "RUSH 2026 / 2027"];
 const YEARS = ["Freshman", "Sophomore", "Junior", "Senior", "Other"];
@@ -101,7 +101,14 @@ export default function RushForm() {
       }
       if (ENDPOINT && !ENDPOINT.startsWith("PASTE_")) {
         // text/plain avoids a CORS preflight so the Apps Script Web App accepts it
-        await fetch(ENDPOINT, { method: "POST", body: JSON.stringify(payload) });
+        // no-cors delivers the POST to the Apps Script Web App reliably. The response
+        // is opaque (we cannot read it), which is fine since we only need it to save.
+        await fetch(ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload),
+        });
       } else {
         console.log("No endpoint set yet. Submission payload:", payload);
       }
