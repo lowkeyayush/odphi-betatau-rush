@@ -459,9 +459,10 @@ const CSS = `
 .bt-corner.tl{ top:-3px; left:-3px; } .bt-corner.tr{ top:-3px; right:-3px; }
 .bt-corner.bl{ bottom:-3px; left:-3px; } .bt-corner.br{ bottom:-3px; right:-3px; }
 
-.bt-prog-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:11px; }
-.bt-prog-head .mono{ font-size:10px; }
-.bt-cur{ font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.16em; font-size:10px; color:var(--accent); }
+.bt-prog-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; gap:12px; }
+.bt-prog-head .mono{ font-size:11.5px; }
+.bt-cur{ font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.1em; font-size:11.5px; font-weight:500; color:#ff5a5a; }
+.bt-prog-head .bt-quiet{ color:#c4cdd5; }
 .bt-track{ height:2px; background:rgba(216,234,255,0.12); position:relative; overflow:hidden; }
 .bt-track-fill{ position:absolute; left:0; top:0; height:100%; background:var(--accent); transition:width 560ms cubic-bezier(.22,1,.36,1); }
 .bt-page{ margin-top:26px; }
