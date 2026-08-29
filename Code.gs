@@ -6,9 +6,9 @@
  * Fill in the two IDs below, then deploy as a Web App (see SETUP.md).
  */
 
-var SHEET_ID = "PASTE_YOUR_SHEET_ID_HERE";              // the Google Sheet that stores responses
+var SHEET_ID = "1iaYxDv9tgLNYfOQwc4O2mKZcYAYMOsofx7ZTav6fVBU";              // the Google Sheet that stores responses
 var TAB_NAME = "Responses";                              // the tab inside that Sheet
-var TRANSCRIPT_FOLDER_ID = "PASTE_YOUR_FOLDER_ID_HERE";  // a Drive folder for transcripts
+var TRANSCRIPT_FOLDER_ID = "1Zadh2bgRdjYuiEgrzWxIW8ZfWBgBAnYo";  // a Drive folder for transcripts
 
 var HEADERS = [
   "Timestamp", "Email", "Confirm email", "Name", "Age", "Instagram", "Phone",
